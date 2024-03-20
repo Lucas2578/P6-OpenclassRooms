@@ -1,12 +1,12 @@
 import React from 'react';
 
-const About = () => {
+const FichLogement = () => {
   return (
     <div>
       <h1>Accueil</h1>
-      <p>A PROPOS</p>
+      <p>LES BIGS LOGEMENTS</p>
     </div>
   );
 };
 
-export default About;
+export default FichLogement;

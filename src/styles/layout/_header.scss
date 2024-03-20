@@ -1,3 +1,5 @@
+@import '../utils/variables.scss';
+
 .header {
     width: 100%;
     display: flex;
@@ -8,6 +10,14 @@
     &__logo {
         img {
             width: 100%;
+        }
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: $breakpoints_small-device) {
+            width: 33%;
         }
     }
 };

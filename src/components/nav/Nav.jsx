@@ -13,7 +13,7 @@ function Nav() {
             <ul> 
                 {routes.map(route => (
                 <li key={route.path}>
-                    <NavLink to={route.path} activeClassName="active">
+                    <NavLink to={route.path} activeclassname="active">
                         {route.name}
                     </NavLink>
                 </li>

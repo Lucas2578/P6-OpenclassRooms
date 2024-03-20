@@ -1,4 +1,5 @@
 import React from 'react';
+import "./styles/app.scss";
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './pages/home/Home';
 import NoPageFound from './pages/errors/NoPageFound';

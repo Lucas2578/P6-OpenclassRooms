@@ -1,0 +1,20 @@
+.nav {
+    display: flex;
+    width: 20%;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        li {
+            display: flex;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+}
+
+.active {
+    text-decoration: underline;
+}

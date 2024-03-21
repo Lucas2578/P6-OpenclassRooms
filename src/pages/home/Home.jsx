@@ -11,7 +11,7 @@ const Home = () => {
       <div className="container">
         <Header />
         <main>
-          <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs"/>
+          <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs" addOverlay={true}/>
           <CardList />
         </main>
       </div>

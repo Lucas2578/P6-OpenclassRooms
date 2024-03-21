@@ -22,13 +22,23 @@
         border-radius: 5px;
         padding: 1% 0% 1% 0%;
         margin-top: 30px;
+        font-size: 24px;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: $breakpoints_small-device) {
+            font-size: 13px;
+        }
 
         h2 {
             margin-left: 1.6%;
         }
 
-        i {
+        &--button {
             margin-right: 1.6%;
+            cursor: pointer;
         }
     }
 
@@ -38,5 +48,13 @@
         font-size: 18px;
         margin-left: 2%;
         margin-right: 2%;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: $breakpoints_small-device) {
+            font-size: 12px;
+        }
     }
 }

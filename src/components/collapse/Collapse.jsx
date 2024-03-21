@@ -24,15 +24,17 @@ function Collapse () {
             {/* On parcours toutes les données filtrées pour créer un élément pour chaque collapse qui a la catégorie "about" */}
             {filteredCollapse.map((collapse, index) => (
                 // Déclenche la fonction "toggleCollapse" au clic avec l'index de la collapse en argument
-                <div key={collapse.id} className="collapse__header" onClick={() => toggleCollapse(index)}>
+                <div key={collapse.id} className="collapse__header">
                     <div className="collapse__title">
                         <h2>{collapse.title}</h2>
+                        <span className="collapse__title--button" onClick={() => toggleCollapse(index)}>
                         {/* Si isOpenList est true, ça affiche un chevron-down (?) et si c'est false, ça affiche un chevron-up (:) */}
                         {isOpenList[index] ? (
                             <i class="fa-solid fa-chevron-down"></i>
                         ) : (
                             <i class="fa-solid fa-chevron-up"></i>
                         )}
+                        </span>
                     </div>
                     {/* On se sert de && pour que SI la collapse est true (donc ouverte), cela affiche le content */}
                     {isOpenList[index] && <div className="collapse__content">{collapse.text}</div>}

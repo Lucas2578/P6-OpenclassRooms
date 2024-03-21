@@ -5,10 +5,10 @@ import Card from "./Card";
 
 const CardList = () => {
     return (
-        <section className="home__card--list">
+        <section className="card__list">
             {logements.map((logement) => {
                 return (
-                    <article key={logement.id}>
+                    <article key={logement.id} className="card__list--element">
                         <Link to={`/logement/${logement.id}`}>
                             <Card image={logement.cover} title={logement.title} />
                         </Link>

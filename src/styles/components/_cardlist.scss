@@ -1,0 +1,17 @@
+@import '../utils/variables.scss';
+
+.card__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6.8%;
+
+    &--element {
+        width: 28%;
+        margin: 2.17% 2.61% 2.17% 2.61%;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            width: 100%;
+            margin: 3% 0% 3% 0%;
+        }
+    }
+}

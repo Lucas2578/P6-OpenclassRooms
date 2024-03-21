@@ -4,6 +4,7 @@ import logements from "../datas/logement.json";
 import Card from "./Card";
 
 const CardList = () => {
+
     return (
         <section className="card__list">
             {logements.map((logement) => {

@@ -3,6 +3,7 @@ import Header from '../../components/header/Header';
 import Banner from '../../components/banner/Banner';
 import imgAboutBanner from '../../assets/images/banner/about_banner.png';
 import Collapse from '../../components/collapse/Collapse';
+import collapseData from '../../components/datas/dataCollapse.json';
 import Footer from '../../components/footer/Footer';
 
 const About = () => {
@@ -12,8 +13,7 @@ const About = () => {
         <Header />
         <Banner image={imgAboutBanner}/>
         <main>
-          
-        <Collapse />
+          <Collapse data={collapseData} />
         </main>
       </div>
       <Footer />

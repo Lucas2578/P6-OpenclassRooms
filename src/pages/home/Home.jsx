@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <div className="container">
       <Header />
-      <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs"/>
+      <main>
+        <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs"/>
+      </main>
     </div>
   );
 };

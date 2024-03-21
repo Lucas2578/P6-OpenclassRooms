@@ -27,13 +27,8 @@ function Collapse () {
                 <div key={collapse.id} className="collapse__header">
                     <div className="collapse__title">
                         <h2>{collapse.title}</h2>
-                        <span className="collapse__title--button" onClick={() => toggleCollapse(index)}>
-                        {/* Si isOpenList est true, ça affiche un chevron-down (?) et si c'est false, ça affiche un chevron-up (:) */}
-                        {isOpenList[index] ? (
-                            <i class="fa-solid fa-chevron-down"></i>
-                        ) : (
+                        <span className={`collapse__title--button ${isOpenList[index] ? 'open' : ''}`} onClick={() => toggleCollapse(index)}>
                             <i class="fa-solid fa-chevron-up"></i>
-                        )}
                         </span>
                     </div>
                     {/* On se sert de && pour que SI la collapse est true (donc ouverte), cela affiche le content */}

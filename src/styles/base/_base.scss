@@ -1,8 +1,13 @@
+@import '../utils/variables.scss';
+
 * {
     padding: 0;
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    background-color: #F6F6F6;
+}
+
+.root {
+    background-color: $background-color;
 }
 
 li {

@@ -3,6 +3,13 @@
 .collapse {
     display: flex;
     flex-direction: column;
+    margin-left: 8.5%;
+    margin-right: 8.5%;
+
+    @media screen and (max-width: $breakpoints_medium-device) {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 
     &__header {
         display: flex;

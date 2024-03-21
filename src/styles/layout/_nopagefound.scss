@@ -10,6 +10,14 @@
         color: #FF6060;
         font-weight: bolder;
         font-size: 288px;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            font-size: 144px;
+        }
+
+        @media screen and (max-width: $breakpoints_small-device) {
+            font-size: 96px;
+        }
     }
 
     &__text {
@@ -17,6 +25,14 @@
         color: #FF6060;
         font-weight: 500;
         font-size: 36px;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: $breakpoints_small-device) {
+            font-size: 18px;
+        }
     }
 
     &__back {
@@ -24,5 +40,13 @@
         margin-bottom: 6.5%;
         font-size: 18px;
         text-decoration: underline;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: $breakpoints_small-device) {
+            font-size: 14px;
+        }
     }
 }

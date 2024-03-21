@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: errorFadeInUp 0.75s ease forwards;
     &__number {
         margin-top: 10.5%;
         color: #FF6060;
         font-weight: bolder;
         font-size: 288px;
+        animation: errorFadeInUp 0.75s ease forwards;
 
         @media screen and (max-width: $breakpoints_medium-device) {
             font-size: 144px;
@@ -26,6 +26,7 @@
         color: #FF6060;
         font-weight: 500;
         font-size: 36px;
+        animation: errorFadeInUp 0.75s ease forwards;
 
         @media screen and (max-width: $breakpoints_medium-device) {
             font-size: 24px;

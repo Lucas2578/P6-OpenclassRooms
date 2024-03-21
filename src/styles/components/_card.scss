@@ -5,12 +5,12 @@
     position: relative;
     height: 340px;
     opacity: 0;
-    animation: fadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation: cardFadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 
     @media screen and (max-width: $breakpoints_medium-device) {
         height: 255px;
         opacity: 0;
-        animation: fadeInRightMobile 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+        animation: cardFadeInRightMobile 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
     }
 
     &__img {

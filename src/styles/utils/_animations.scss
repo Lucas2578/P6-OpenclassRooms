@@ -1,4 +1,5 @@
-@keyframes fadeInUp {
+// Animations utilisées pour les cartes de la page d'accueil
+@keyframes cardFadeInUp {
     0% {
       opacity: 0;
       transform: translateY(50px) rotateX(-90deg) scale(0.5); // On déplace vers le haut, on l'incline vers l'arrière et réduit sa taille originale
@@ -12,7 +13,7 @@
     }
   }
 
-  @keyframes fadeInRightMobile {
+  @keyframes cardFadeInRightMobile {
     0% {
         opacity: 0;
         transform: translateX(100%) rotateY(-90deg) scale(0.5); // On commence à 100% de largeur de l'écran à droite, on incline et on réduit la taille originale
@@ -23,5 +24,17 @@
     100% {
         opacity: 1;
         transform: translateX(0) rotateY(0) scale(1); // Il arrive à sa position finale
+    }
+}
+
+// Animation utilisée pour l'apparition de la page d'erreur
+@keyframes errorFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

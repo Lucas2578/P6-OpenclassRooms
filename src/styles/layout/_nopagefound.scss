@@ -1,0 +1,28 @@
+@import '../utils/variables.scss';
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__number {
+        margin-top: 10.5%;
+        color: #FF6060;
+        font-weight: bolder;
+        font-size: 288px;
+    }
+
+    &__text {
+        margin-top: 10.5%;
+        color: #FF6060;
+        font-weight: 500;
+        font-size: 36px;
+    }
+
+    &__back {
+        margin-top: 10.5%;
+        margin-bottom: 6.5%;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}

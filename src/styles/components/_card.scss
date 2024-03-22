@@ -24,9 +24,12 @@
         font-size: 18px;
         position: absolute;
         bottom: 0px;
-        margin: 15px 20px;
+        margin: 20px;
         box-sizing: inherit;
         color: white;
-        font-weight: 700px;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            margin: 20px 15px;
+        }
     }
 }

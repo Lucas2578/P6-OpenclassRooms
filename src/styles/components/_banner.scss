@@ -2,11 +2,12 @@
 
 .banner {
     position: relative;
-    margin-top: 3.5%;
+    margin-top: 50px;
     font-size: 48px;
     height: 223px;
 
     @media screen and (max-width: $breakpoints_small-device) {
+        margin-top: 27px;
         height: 111px;
       }
 
@@ -42,7 +43,7 @@
         @media screen and (max-width: $breakpoints_small-device) {
             font-size: 24px;
             width: 69%;
-            margin-left: 2.5%;
+            margin-left: 16px;
         }
     }
 

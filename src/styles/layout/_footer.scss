@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: $breakpoints_small-device) {
+        margin-top: 10px;
+    }
+
     &__logo {
         width: 122px;
         height: 40px;
@@ -16,7 +20,7 @@
     &__text {
         color: white;
         font-size: 24px;
-        margin-top: 1.5%;
+        margin-top: 28.56px;
         text-align: center;
 
         @media screen and (max-width: $breakpoints_small-device) {

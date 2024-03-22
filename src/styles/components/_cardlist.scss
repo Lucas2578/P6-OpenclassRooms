@@ -3,15 +3,32 @@
 .card__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 6.8%;
+    margin-top: 100px;
+
+    @media screen and (max-width: $breakpoints_xlarge-device) {
+        margin-left: 25px;
+    }
+
+    @media screen and (max-width: $breakpoints_medium-device) {
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width: $breakpoints_small-device) {
+        width: 100%;
+        margin-top: 12px;
+    }
 
     &--element {
-        width: 28%;
-        margin: 2.17% 2.61% 2.17% 2.61%;
+        width: 28.13%;
+        margin: 25px 30px 25px 30px;
+
+        @media screen and (max-width: $breakpoints_xlarge-device) {
+            width: 41%;
+        }
 
         @media screen and (max-width: $breakpoints_medium-device) {
             width: 100%;
-            margin: 3% 0% 3% 0%;
+            margin: 10px 0px 10px 0px;
         }
     }
 }

@@ -41,9 +41,10 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        margin-top: 2.4%;
+        margin-top: 30px;
 
         @media screen and (max-width: $breakpoints_medium-device) {
+            margin-top: 15px;
             flex-direction: column;
         }
 
@@ -57,7 +58,7 @@
             }
         
             &-location {
-                margin-top: 0.85%;
+                margin-top: 5px;
                 font-size: 18px;
                 font-weight: 500;
             }
@@ -104,20 +105,26 @@
             &-host {
                 display: flex;
                 justify-content: right;
-                align-items: center;
+                align-items: flex-end;
+
+                @media screen and (max-width: $breakpoints_medium-device) {
+                    width: 135.5px;
+                }
 
                 &--name {
                     color: $primary-color;
                     font-weight: 500;
                     font-size: 18px;
-                    width: 33%;
+                    width: 93px;
                     text-align: right;
-                    margin-right: 2.9%;
 
                     @media screen and (max-width: $breakpoints_medium-device) {
                         width: auto;
+                        font-size: 16px;
+                    }
+
+                    @media screen and (max-width: $breakpoints_small-device) {
                         font-size: 12px;
-                        margin-right: 8.6%;
                     }
                 }
 
@@ -125,11 +132,18 @@
                     border-radius: 50px;
                     width: 64px;
                     height: 64px;
+                    margin-left: 10px;
 
                     @media screen and (max-width: $breakpoints_medium-device) { 
                         border-radius: 25px;
-                        width: 32px;
-                        height: 32px;
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                    @media screen and (max-width: $breakpoints_small-device) { 
+                        border-radius: 25px;
+                        width: 48px;
+                        height: 48px;
                     }
                 }
             }
@@ -138,7 +152,7 @@
                 margin-top: 6.1%;
                 display: flex;
                 justify-content: right;
-                gap: 1.5%;
+                gap: 6px;
                 font-size: 20px;
 
                 @media screen and (max-width: $breakpoints_medium-device) {

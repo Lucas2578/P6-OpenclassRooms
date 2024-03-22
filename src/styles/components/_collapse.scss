@@ -5,12 +5,18 @@
     &-about {
         display: flex;
         flex-direction: column;
-        margin-left: 8.5%;
-        margin-right: 8.5%;
+        margin-left: 108px;
+        margin-right: 108px;
+        margin-top: 8px;
+        margin-bottom: 8px;
         
-        @media screen and (max-width: $breakpoints_medium-device) {
-            margin-left: 0%;
-            margin-right: 0%;
+        @media screen and (max-width: $breakpoints_large-device) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        
+        @media screen and (max-width: $breakpoints_small-device) {
+            margin-top: 0px;
         }
     }
 
@@ -25,13 +31,15 @@
 
         & .collapse__header {
            max-width: 45.5%; 
-
+            
            @media screen and (max-width: $breakpoints_medium-device) {
                max-width: 100%;
            }
         }
 
         & .collapse__title {
+            margin-top: 24px;
+            padding: 1.8% 0% 1.8% 0%;
 
             h2 {
                 font-size: 18px;
@@ -66,9 +74,13 @@
         border-radius: 5px;
         padding: 1% 0% 1% 0%;
         margin-top: 30px;
+    
+        @media screen and (max-width: $breakpoints_small-device) {
+            margin-top: 20px;
+        }
 
         h2 {
-            margin-left: 1.6%;
+            margin-left: 10px;
             font-size: 24px;
 
             @media screen and (max-width: $breakpoints_medium-device) {
@@ -81,12 +93,17 @@
         }
  
         &--button {
-            margin-right: 22px;
+            margin-right: 24px;
             cursor: pointer;
             transition: transform 0.5s ease;
 
             @media screen and (max-width: $breakpoints_medium-device) {
                 margin-right: 12px;
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: $breakpoints_small-device) {
+                font-size: 16px;
             }
 
             &.open {

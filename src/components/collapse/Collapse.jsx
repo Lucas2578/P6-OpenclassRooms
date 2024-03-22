@@ -17,7 +17,7 @@ function Collapse({ isFichLogement, logement }) {
     }
 
     return (
-        <div className="collapse">
+        <div className={`collapse-${isFichLogement ? 'fichlogement' : 'about'}`}>
             {/* Affichage des collapses provenant de dataCollapse.json uniquement si ce n'est pas la page FichLogement */}
             {!isFichLogement && dataCollapse.map((item, index) => (
                 <div key={item.id} className="collapse__header">
@@ -32,7 +32,7 @@ function Collapse({ isFichLogement, logement }) {
                     {/* Affichage du contenu du collapse s'il est ouvert, (index) permettant de savoir l'état de la collapse */}
                     {isOpenList[index] && (
                         <div className="collapse__content">
-                            {item.text}
+                            <p className="collapse__content--text">{item.text}</p>
                         </div>
                     )}
                 </div>
@@ -51,7 +51,7 @@ function Collapse({ isFichLogement, logement }) {
                         {/* Affichage de la description du logement si le collapse est ouvert */}
                         {isOpenList[dataCollapse.length] && (
                             <div className="collapse__content">
-                                {logement.description}
+                                <p className="collapse__content--text">{logement.description}</p>
                             </div>
                         )}
                     </div>
@@ -67,10 +67,10 @@ function Collapse({ isFichLogement, logement }) {
                         {/* Affichage des équipements du logement si le collapse est ouvert */}
                         {isOpenList[dataCollapse.length + 1] && (
                             <div className="collapse__content">
-                                <ul>
+                                <ul className="collapse__content--list">
                                     {/* Mapping à travers les équipements et affichage de chacun dans une liste */}
                                     {logement.equipments.map((equipment, index) => (
-                                        <li key={index}>{equipment}</li>
+                                        <li className="collapse__content--list-element" key={index}>{equipment}</li>
                                     ))}
                                 </ul>
                             </div>

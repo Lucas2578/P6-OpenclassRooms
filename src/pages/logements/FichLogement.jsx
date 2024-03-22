@@ -4,6 +4,8 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import logementData from '../../components/datas/logement.json';
 import Collapse from '../../components/collapse/Collapse';
+import Rating from '../../components/fichlogement/Rating';
+import Host from '../../components/fichlogement/Host';
 
 const FichLogement = () => {
   // Ici j'extrait les paramètres de l'URL (à savoir l'id du logement) dans ma variable logementId
@@ -29,8 +31,6 @@ const FichLogement = () => {
     setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length);
   }
 
-  const customTitles = ["Titre Collapse 1", "Titre Collapse 2"];
-
   return (
     <div>
       <div className="container">
@@ -39,26 +39,36 @@ const FichLogement = () => {
         <div className="logement__img">
           <img src={pictures[currentIndex]} alt={logement.title} className="logement__img"/>
           <button className="logement__img--next" onClick={handleNextClick}>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
           </button>
           <button className="logement__img--previous" onClick={handlePreviousClick}>
-            <i class="fa-solid fa-chevron-left"></i>
+            <i className="fa-solid fa-chevron-left"></i>
           </button>
         </div>
-        <h2 className="logement__title">{logement.title}</h2>
-        <p className="logement__location">{logement.location}</p>
-        <div className="logement__tags">
-          {tags.map((tag, index) => {
-            return (
-              <div key={index} className="logement__tags--element">
-              <p>{tag}</p>
+
+
+        <div class="logement__description">
+          <div class="logement__description-element">
+            <h2 className="logement__description-element-title">{logement.title}</h2>
+            <p className="logement__description-element-location">{logement.location}</p>
+            <div className="logement__description-element-tags">
+                {tags.map((tag, index) => {
+                  return (
+                    <div key={index} className="logement__description-element-tags--element">
+                      <p>{tag}</p>
+                    </div>
+                  )
+                })}
             </div>
-            )
-          })}
-      </div>
-      {logement && (
-        <Collapse logement={logement} customTitles={customTitles} isFichLogement={true} />
-      )}
+          </div>
+          <div className="logement__description-info">
+            <Host name={logement.host.name} picture={logement.host.picture} />
+            <Rating score={logement.rating} />
+          </div>
+        </div>
+
+
+        {logement && ( <Collapse logement={logement} isFichLogement={true} /> )}
       </main>
       </div>
       <Footer />

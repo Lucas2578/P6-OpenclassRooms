@@ -1,14 +1,50 @@
 @import '../utils/variables.scss';
 
 .collapse {
-    display: flex;
-    flex-direction: column;
-    margin-left: 8.5%;
-    margin-right: 8.5%;
 
-    @media screen and (max-width: $breakpoints_medium-device) {
-        margin-left: 0%;
-        margin-right: 0%;
+    &-about {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8.5%;
+        margin-right: 8.5%;
+        
+        @media screen and (max-width: $breakpoints_medium-device) {
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+    }
+
+    &-fichlogement {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media screen and (max-width: $breakpoints_medium-device) {
+            flex-direction: column;
+        }
+
+        & .collapse__header {
+           max-width: 45.5%; 
+
+           @media screen and (max-width: $breakpoints_medium-device) {
+               max-width: 100%;
+           }
+        }
+
+        & .collapse__title {
+
+            h2 {
+                font-size: 18px;
+
+                @media screen and (max-width: $breakpoints_medium-device) {
+                    font-size: 15px;
+                }
+        
+                @media screen and (max-width: $breakpoints_small-device) {
+                    font-size: 13px;
+                }
+            }
+        }
     }
 
     &__header {
@@ -17,6 +53,7 @@
         align-items: center;
         color: white;
         font-size: 24px;
+        min-width: 45.5%;
     }
 
     &__title {
@@ -29,24 +66,28 @@
         border-radius: 5px;
         padding: 1% 0% 1% 0%;
         margin-top: 30px;
-        font-size: 24px;
-
-        @media screen and (max-width: $breakpoints_medium-device) {
-            font-size: 18px;
-        }
-
-        @media screen and (max-width: $breakpoints_small-device) {
-            font-size: 13px;
-        }
 
         h2 {
             margin-left: 1.6%;
-        }
+            font-size: 24px;
 
+            @media screen and (max-width: $breakpoints_medium-device) {
+                font-size: 18px;
+            }
+    
+            @media screen and (max-width: $breakpoints_small-device) {
+                font-size: 13px;
+            }
+        }
+ 
         &--button {
-            margin-right: 1.6%;
+            margin-right: 22px;
             cursor: pointer;
             transition: transform 0.5s ease;
+
+            @media screen and (max-width: $breakpoints_medium-device) {
+                margin-right: 12px;
+            }
 
             &.open {
                 transform: rotate(-180deg);
@@ -55,20 +96,48 @@
     }
 
     &__content {
-        margin-top: 1.3%;
+        margin-top: 20px;
         color: black;
         font-size: 18px;
-        margin-left: 2%;
-        margin-right: 2%;
         animation: collapseFadeIn 0.3s ease forwards;
         z-index: -1;
+        width: 100%;
 
         @media screen and (max-width: $breakpoints_medium-device) {
+            margin-top: 15px;
             font-size: 15px;
         }
 
         @media screen and (max-width: $breakpoints_small-device) {
+            margin-top: 10px;
             font-size: 12px;
+        }
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-left: 20px;
+
+            @media screen and (max-width: $breakpoints_medium-device) {
+                margin-left: 15px;
+            }
+
+            @media screen and (max-width: $breakpoints_small-device) {
+                margin-left: 10px;
+            }
+        }
+
+        &--text {
+            margin-left: 20px;
+
+            @media screen and (max-width: $breakpoints_medium-device) {
+                margin-left: 15px;
+            }
+
+            @media screen and (max-width: $breakpoints_small-device) {
+                margin-left: 10px;
+            }
         }
     }
 }

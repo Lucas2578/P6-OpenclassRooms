@@ -56,8 +56,8 @@ const FichLogement = () => {
           </div>
 
           {/* Section description */}
-          <div class="logement__description">
-            <div class="logement__description-element">
+          <div className="logement__description">
+            <div className="logement__description-element">
               <h2 className="logement__description-element-title">{logement.title}</h2>
 
               <p className="logement__description-element-location">{logement.location}</p>
@@ -84,7 +84,7 @@ const FichLogement = () => {
           {logement && ( <Collapse logement={logement} isFichLogement={true} /> )}
         </main>
       </div>
-      
+
       <Footer />
     </div>
   );

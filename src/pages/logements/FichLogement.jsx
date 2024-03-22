@@ -44,6 +44,7 @@ const FichLogement = () => {
           <button className="logement__img--previous" onClick={handlePreviousClick}>
             <i className="fa-solid fa-chevron-left"></i>
           </button>
+          <p className="logement__img--counter">{currentIndex + 1}/{pictures.length}</p>
         </div>
 
 

@@ -35,43 +35,56 @@ const FichLogement = () => {
     <div>
       <div className="container">
       <Header />
-      <main className="logement">
-        <div className="logement__img">
-          <img src={pictures[currentIndex]} alt={logement.title} className="logement__img"/>
-          <button className="logement__img--next" onClick={handleNextClick}>
-            <i className="fa-solid fa-chevron-right"></i>
-          </button>
-          <button className="logement__img--previous" onClick={handlePreviousClick}>
-            <i className="fa-solid fa-chevron-left"></i>
-          </button>
-          <p className="logement__img--counter">{currentIndex + 1}/{pictures.length}</p>
-        </div>
+        <main className="logement">
 
+          {/* Section image */}
+          <div className="logement__img">
+            {/* On intègre la picture en fonction de sa position dans le tableau (currentIndex) (cliquer sur les boutons donnent +1 ou -1 au currentIndex) */}
+            <img src={pictures[currentIndex]} alt={logement.title} className="logement__img"/>
 
-        <div class="logement__description">
-          <div class="logement__description-element">
-            <h2 className="logement__description-element-title">{logement.title}</h2>
-            <p className="logement__description-element-location">{logement.location}</p>
-            <div className="logement__description-element-tags">
-                {tags.map((tag, index) => {
-                  return (
-                    <div key={index} className="logement__description-element-tags--element">
-                      <p>{tag}</p>
-                    </div>
-                  )
-                })}
+            {/* On intègre les boutons qui déclenchent la fonction "handleNextClick" ou "handlePreviousClick" */}
+            <button className="logement__img--next" onClick={handleNextClick}>
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <button className="logement__img--previous" onClick={handlePreviousClick}>
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+
+            {/* Compteur pour savoir à la combientième photo on est sur combien */}
+            <p className="logement__img--counter">{currentIndex + 1}/{pictures.length}</p>
+          </div>
+
+          {/* Section description */}
+          <div class="logement__description">
+            <div class="logement__description-element">
+              <h2 className="logement__description-element-title">{logement.title}</h2>
+
+              <p className="logement__description-element-location">{logement.location}</p>
+
+              {/* On map pour trouver tous les tags puis on créer un <li> pour chaque tag trouvé */}
+                <ul className="logement__description-element-tags">
+                  {tags.map((tag, index) => {
+                    return (
+                        <li key={index} className="logement__description-element-tags--element">{tag}</li>
+                    )
+                  })}
+                </ul>
             </div>
-          </div>
-          <div className="logement__description-info">
-            <Host name={logement.host.name} picture={logement.host.picture} />
-            <Rating score={logement.rating} />
-          </div>
-        </div>
 
-
-        {logement && ( <Collapse logement={logement} isFichLogement={true} /> )}
-      </main>
+            <div className="logement__description-info">
+              <Host name={logement.host.name} picture={logement.host.picture} />
+              <Rating score={logement.rating} />
+            </div>
+            
+          </div>
+          
+          {/* On fait passer logement en tant que prop dans le composant Collapse */}
+          {/* On indique que c'est bien la page "FichLogement", utile pour définir les collapses et leurs données */}
+          {logement && ( <Collapse logement={logement} isFichLogement={true} /> )}
+        </main>
       </div>
+      
       <Footer />
     </div>
   );

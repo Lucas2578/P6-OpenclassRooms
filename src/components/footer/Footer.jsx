@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo/logo_white.png";
+import logo from "../../assets/images/logo/logo_white.webp";
 
 function Footer() {
     return (

@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo/logo_colored.png";
+import logo from "../../assets/images/logo/logo_colored.webp";
 import Nav from "../nav/Nav";
 
 function Header() {

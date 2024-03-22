@@ -7,6 +7,26 @@
     opacity: 0;
     animation: cardFadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        transition: 0.35s;
+    }
+
+    &:hover {
+
+        &:before {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+    }
+
     @media screen and (max-width: $breakpoints_medium-device) {
         height: 255px;
         opacity: 0;

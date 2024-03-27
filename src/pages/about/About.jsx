@@ -13,7 +13,14 @@ const About = () => {
         <Header />
         <Banner image={imgAboutBanner}/>
         <main>
-          <Collapse data={collapseData} />
+          {collapseData.map((collapse, index) => (
+            <Collapse key={index} title={collapse.title} children={
+              <p className="collapse__content--text">
+                {collapse.text}
+                </p>
+                }
+              />
+          ))}
         </main>
       </div>
       <Footer />

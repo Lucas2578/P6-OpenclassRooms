@@ -79,9 +79,17 @@ const FichLogement = () => {
             
           </div>
           
-          {/* On fait passer logement en tant que prop dans le composant Collapse */}
-          {/* On indique que c'est bien la page "FichLogement", utile pour définir les collapses et leurs données */}
-          {logement && ( <Collapse logement={logement} isFichLogement={true} /> )}
+          <div className="collapse-fichlogement">
+            <Collapse title="Description" children={<p>{logement.description}</p>} />
+            <Collapse title="Équipements" children={
+              <ul>
+                {/* On map les équipements et on les affiche dans des balises <li> */}
+                {logement.equipments.map((equipments, index) => (
+                  <li key={index}>{equipments}</li>
+                ))}
+              </ul>} 
+            />
+          </div>
         </main>
       </div>
 

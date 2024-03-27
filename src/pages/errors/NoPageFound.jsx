@@ -10,7 +10,7 @@ const NoPageFound = () => {
         <main className="error">
           <h2 className="error__number">404</h2>
           <p className="error__text">Oups! La page que vous demandez n'existe pas.</p>
-          <a className="error__back" href="#/">Retourner sur la page d'accueil</a>
+          <a className="error__back" href="/">Retourner sur la page d'accueil</a>
         </main>
       </div>
       <Footer />

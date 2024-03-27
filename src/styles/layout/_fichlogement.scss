@@ -133,7 +133,8 @@
                 align-items: flex-end;
 
                 @media screen and (max-width: $breakpoints_medium-device) {
-                    width: 135.5px;
+                    width: 121.4px;
+                    margin-top: 16px;
                 }
 
                 &--name {
@@ -183,6 +184,7 @@
                 @media screen and (max-width: $breakpoints_medium-device) {
                     width: 50%;
                     justify-content: left;
+                    align-items: center;
                 }
     
                 .full-star {

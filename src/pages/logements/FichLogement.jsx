@@ -80,12 +80,12 @@ const FichLogement = () => {
           </div>
           
           <div className="collapse-fichlogement">
-            <Collapse title="Description" children={<p>{logement.description}</p>} />
+            <Collapse title="Description" children={<p className="collapse__content--text">{logement.description}</p>} />
             <Collapse title="Équipements" children={
-              <ul>
+              <ul className="collapse__content--list">
                 {/* On map les équipements et on les affiche dans des balises <li> */}
                 {logement.equipments.map((equipments, index) => (
-                  <li key={index}>{equipments}</li>
+                  <li key={index} className="collapse__content--list-element">{equipments}</li>
                 ))}
               </ul>} 
             />
